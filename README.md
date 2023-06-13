@@ -1,8 +1,19 @@
 # oc-da-p14-component
 OpenClassrooms - DA JS/React - Projet 14 : Faites passer une librairie jQuery (component)
 
-## Component type
-React Modal
+## Author
+
+- [@jbbrejon](https://github.com/jbbrejon)
+
+## Requirements
+
+- NodeJS (version >=16.14)
+- Npm
+- Editor : Visual Studio code recommended
+
+
+## Descripton
+React component : Modal
 
 ## Installation
 
@@ -12,7 +23,8 @@ Run :```npm install @jbbrejon/react-modal```
 ```
 import React from 'react'
 import { useState } from 'react'
-import { Modal } from "@jbbrejon/react-modal";
+import Modal from "@jbbrejon/react-modal";
+import '@jbbrejon/react-modal/dist/style.css'
 
 function App() {
 
@@ -30,7 +42,7 @@ function App() {
     return (
         <div>
             <button onClick={toggleModal}>Display Modal</button>
-            {displayModal ? <Modal message="Employee Created!" toggle={toggleModal} /> : null}
+            {displayModal ? <Modal message={message} toggle={toggleModal} /> : null}
         </div>
   );
 };
