@@ -5,6 +5,13 @@ import PropTypes from 'prop-types';
 // Import CSS module
 import styles from './modal.module.css'
 
+/**
+ * Modal component.
+ *
+ * @param {string} message - Message to display 
+ * @param {func} change - Function to update state of parent component (setDisplayModal)
+ * @returns {JSX.Element} - Rendered component.
+ */
 function Modal({ message, toggle }) {
     return (
         <>
@@ -18,6 +25,7 @@ function Modal({ message, toggle }) {
     )
 }
 
+// PropTypes
 Modal.propTypes = {
     message: PropTypes.string,
     toggle: PropTypes.func,
